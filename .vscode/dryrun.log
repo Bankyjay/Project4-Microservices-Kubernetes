@@ -1,0 +1,15 @@
+make --dry-run --always-make --keep-going --print-directory
+make: Entering directory '/home/bankyjay/Project4-Mircroservices-Kubernetes'
+python3 -m venv ~/.devops
+source ~/.devops/bin/activate
+make: Leaving directory '/home/bankyjay/Project4-Mircroservices-Kubernetes'
+ 
+Makefile:29: warning: overriding recipe for target 'setup'
+Makefile:9: warning: ignoring old recipe for target 'setup'
+Makefile:33: warning: overriding recipe for target 'install'
+Makefile:14: warning: ignoring old recipe for target 'install'
+Makefile:37: warning: overriding recipe for target 'test'
+Makefile:19: warning: ignoring old recipe for target 'test'
+Makefile:49: warning: overriding recipe for target 'lint'
+Makefile:24: warning: ignoring old recipe for target 'lint'
+

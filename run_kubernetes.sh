@@ -4,30 +4,19 @@
 
 # Step 1:
 # This is your Docker ID/path
-# dockerpath=<>
+dockerpath=bankyjay/flaskapp
 
 # Step 2
 # Run the Docker Hub container with kubernetes
-
+kubectl run flaskapp \
+    --image=$dockerpath \
+    --image-pull-policy="Always"
 
 # Step 3:
 # List kubernetes pods
-
-# Step 4:
-# Forward the container port to a host
-
-#!/usr/bin/env bash
-
-dockerpath="noahgift/flasksklearn"
-
-# Run in Docker Hub container with kubernetes
-kubectl run flaskskearlndemo\
-    --generator=run-pod/v1\
-    --image=$dockerpath\
-    --port=80 --labels app=flaskskearlndemo
-
-# List kubernetes pods
 kubectl get pods
 
+
+# Step 4:
 # Forward the container port to host
-kubectl port-forward flaskskearlndemo 8000:80
+kubectl port-forward flaskapp 8000:80

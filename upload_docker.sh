@@ -6,17 +6,15 @@
 # Step 1:
 # Create dockerpath
 # dockerpath=<your docker ID/path>
-dockerpath=udapp
+dockerpath=bankyjay/flaskapp
 
 # Step 2:  
 # Authenticate & tag
 echo "Docker ID and Image: $dockerpath"
-docker login
+docker login -u bankyjay
 
 # Step 3:
 # Push image to a docker repository
 # Ensure Docker Desktop is running locally
-docker tag udapp $dockerpath:v1
-docker push $dockerpath:v1
-
-
+docker tag flaskapp $dockerpath:latest
+docker push $dockerpath:latest
